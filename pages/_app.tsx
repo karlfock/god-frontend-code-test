@@ -1,20 +1,7 @@
-import Main from '../src/components/Main';
-import React from 'react';
-import { StyleProvider, ThemePicker } from 'vcc-ui';
-import GlobalStyles from '../src/components/GlobalStyles';
+import type { AppProps } from 'next/app';
 
-
-function HomePage() {
-  return (
-      <StyleProvider>
-            <ThemePicker variant="light">
-                <React.StrictMode>
-                    <GlobalStyles />
-                    <Main />
-                </React.StrictMode>
-            </ThemePicker>
-      </StyleProvider>
-  );
+const App = ({ Component }: AppProps): JSX.Element => {
+    return <Component />
 }
 
-export default HomePage;
+export default App;

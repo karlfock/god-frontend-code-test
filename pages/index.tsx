@@ -1,8 +1,20 @@
-import * as React from 'react';
-import  Main  from '../src/components/Main';
+import Main from '../src/components/Main';
+import React from 'react';
+import { StyleProvider, ThemePicker } from 'vcc-ui';
+import GlobalStyles from '../src/components/GlobalStyles';
 
-const Index = () => {
-  return <Main />
+
+function IndexPage() {
+    return (
+        <StyleProvider>
+            <ThemePicker variant="light">
+                <React.StrictMode>
+                    <GlobalStyles />
+                    <Main />
+                </React.StrictMode>
+            </ThemePicker>
+        </StyleProvider>
+    );
 }
 
-export default Index;
+export default IndexPage;
