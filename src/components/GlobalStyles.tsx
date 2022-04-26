@@ -11,7 +11,7 @@ const GlobalStyles = createGlobalStyle`
             width: 50%;
         }
         
-        // laptop
+        // tablet
         @media (min-width: 768px) {
             width: 30%;
         }
@@ -25,6 +25,14 @@ const GlobalStyles = createGlobalStyle`
         @media (min-width: 1440px) {
             width: 15%;
         }
+    }
+    
+    .icon {
+        cursor: pointer;
+    }
+    
+    .rotateIcon {
+        transform: rotate(180deg);
     }
  
 `;
